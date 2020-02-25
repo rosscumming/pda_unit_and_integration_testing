@@ -66,8 +66,8 @@ describe("calculator", function() {
     calculator.numberClick(2);
     calculator.operatorClick("+");
     calculator.numberClick(3);
-    calculator.operatorClick("=");
     calculator.clearClick();
-    assert.equal(0, calculator.runningTotal);
+    calculator.operatorClick("=");
+    assert.equal(2, calculator.previousTotal);
   });
 });
